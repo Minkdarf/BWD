@@ -1,137 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DTLQ</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- KHU VỰC 1: HEADER & BANNER LƯỢN SÓNG -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <section class="hero-section">
-        <!-- Menu điều hướng -->
-        <nav class="navbar">
-            <div class="logo">
-                <span class="logo-icon">DTLQ</span> <strong>Laptop</strong>
-            </div>
-            
-            <!-- Nút Hamburger cho Điện thoại -->
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-
-            <ul class="nav-links" id="nav-menu">
-                <li><a href="#home">TRANG CHỦ</a></li>
-                <li><a href="#products">SẢN PHẨM</a></li>
-                <li><a href="#contact">LIÊN HỆ</a></li>
-            </ul>
-        </nav>
-
-        <!-- Nội dung Banner -->
-        <div class="hero-content" id="home">
-            <div class="hero-text">
-                <h1>Tìm kiếm laptop phù hợp cho việc học và giải trí</h1>
-                <p style="margin-bottom: 30px; font-size: 1.1rem; opacity: 0.9;">Lựa chọn tối ưu giữa hiệu năng, thiết kế và giá thành dành riêng cho học sinh, sinh viên.</p>
-                <div class="hero-buttons">
-                    <a href="#products" class="btn btn-primary" style="text-decoration:none;">Xem Sản Phẩm</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="https://phucanhcdn.com/media/lib/24-07-2025/laptop-lenovo-loq-gaming-15iax9e-83lk0079vn-h3.jpg">
-            </div>
+      <nav class="navbar">
+        <div class="logo">
+          <span class="logo-icon">DTLQ</span> <strong>Laptop</strong>
         </div>
 
-        <!-- Sóng SVG -->
-        <div class="wave">
-           <svg viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
+
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="#home">TRANG CHỦ</a></li>
+          <li><a href="#products">SẢN PHẨM</a></li>
+          <li><a href="#contact">LIÊN HỆ</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero-content" id="home">
+        <div class="hero-text">
+          <h1>Tìm kiếm laptop phù hợp cho việc học và giải trí</h1>
+          <p style="margin-bottom: 30px; font-size: 1.1rem; opacity: 0.9">
+            Lựa chọn tối ưu giữa hiệu năng, thiết kế và giá thành dành riêng cho
+            học sinh, sinh viên.
+          </p>
+          <div class="hero-buttons">
+            <a
+              href="#products"
+              class="btn btn-primary"
+              style="text-decoration: none"
+              >Xem Sản Phẩm</a
+            >
+          </div>
+        </div>
+        <div class="hero-video">
+          <video autoplay loop muted playsinline>
+            <source
+              src="test/Meet the new Lenovo ThinkBook 14 i Gen 6+ - Lenovo (1080p, h264, youtube).mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </div>
+
+      <div class="wave">
+        <svg
+          viewBox="0 0 1440 320"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill="#ffffff"
+            fill-opacity="1"
+            d="M0,160L48,160C96,160,192,160,288,181.3C384,203,480,245,576,245.3C672,245,768,203,864,170.7C960,139,1056,117,1152,117.3C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
     </section>
 
-    <!-- KHU VỰC 2: TÍNH NĂNG NỔI BẬT -->
     <section class="features-section" id="features">
-        <div class="feature-item">
-            <div class="feature-icon">💼</div>
-            <h3>Mỏng Nhẹ</h3>
-            <p>Thiết kế gọn gàng, dễ dàng mang theo đến giảng đường mỗi ngày.</p>
-        </div>
-        <div class="feature-item">
-            <div class="feature-icon">🎮</div>
-            <h3>Gaming</h3>
-            <p>Hiệu năng mạnh mẽ, xử lý mượt mà các tựa game và phần mềm nặng.</p>
-        </div>
-        <div class="feature-item">
-            <div class="feature-icon">🔋</div>
-            <h3>Pin Trâu</h3>
-            <p>Thời lượng pin ấn tượng, đáp ứng nhu cầu học tập cả ngày dài.</p>
-        </div>
-        <div class="feature-item">
-            <div class="feature-icon">🛡️</div>
-            <h3>Bảo Hành Tốt</h3>
-            <p>Chính sách bảo hành chính hãng, hỗ trợ kỹ thuật nhanh chóng.</p>
-        </div>
+      <div class="feature-item">
+        <div class="feature-icon">💼</div>
+        <h3>Mỏng Nhẹ</h3>
+        <p>Thiết kế gọn gàng, dễ dàng mang theo đến giảng đường mỗi ngày.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🎮</div>
+        <h3>Gaming</h3>
+        <p>Hiệu năng mạnh mẽ, xử lý mượt mà các tựa game và phần mềm nặng.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔋</div>
+        <h3>Pin Trâu</h3>
+        <p>Thời lượng pin ấn tượng, đáp ứng nhu cầu học tập cả ngày dài.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🛡️</div>
+        <h3>Bảo Hành Tốt</h3>
+        <p>Chính sách bảo hành chính hãng, hỗ trợ kỹ thuật nhanh chóng.</p>
+      </div>
     </section>
 
-    <!-- KHU VỰC 3: DANH SÁCH SẢN PHẨM -->
-    <main id="products">
-        <!-- Phân khúc Gaming -->
-        <section class="category-section">
-            <h2 class="section-title">🔥 Laptop Gaming & Hiệu Năng Cao</h2>
-            <p class="section-desc">Phù hợp lập trình nặng, đồ họa, render video, chơi game eSport</p>
-            <div id="gaming-container" class="product-grid"></div>
-        </section>
+    <section class="filter-section">
+      <div class="filter-container">
+        <h3>Đề Xuất Laptop Theo Nhu Cầu</h3>
+        <div class="filter-controls">
+          <select id="filter-brand" onchange="filterProducts()">
+            <option value="all">Tất cả các hãng</option>
+            <option value="Acer">Acer</option>
+            <option value="Asus">Asus</option>
+            <option value="Dell">Dell</option>
+            <option value="HP">HP</option>
+            <option value="Lenovo">Lenovo</option>
+          </select>
 
-        <!-- Phân khúc Mỏng nhẹ -->
-        <section class="category-section">
-            <h2 class="section-title">💼 Laptop Mỏng Nhẹ & Thời Trang</h2>
-            <p class="section-desc">Dễ dàng mang theo đi học, làm slide thuyết trình, xem phim</p>
-            <div id="office-container" class="product-grid"></div>
-        </section>
+          <select id="filter-category" onchange="filterProducts()">
+            <option value="all">Tất cả nhu cầu</option>
+            <option value="gaming">Gaming & Hiệu năng cao</option>
+            <option value="thin-light">Mỏng nhẹ văn phòng</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <main id="products">
+      <section class="category-section" id="gaming-section">
+        <h2 class="section-title">🔥 Laptop Gaming & Hiệu Năng Cao</h2>
+        <p class="section-desc">
+          Phù hợp lập trình nặng, đồ họa, render video, chơi game eSport
+        </p>
+        <div id="gaming-container" class="product-grid"></div>
+      </section>
+
+      <section class="category-section" id="office-section">
+        <h2 class="section-title">💼 Laptop Mỏng Nhẹ & Thời Trang</h2>
+        <p class="section-desc">
+          Dễ dàng mang theo đi học, làm slide thuyết trình, xem phim
+        </p>
+        <div id="office-container" class="product-grid"></div>
+      </section>
     </main>
 
-    <!-- KHU VỰC 4: HỘP THOẠI MODAL (XEM CHI TIẾT) -->
     <div id="product-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2 id="modal-title">Tên Laptop</h2>
-            
-            <div class="modal-body">
-                <!-- Cột trái: Ưu / Nhược điểm -->
-                <div class="specs-info">
-                    <div class="pros">
-                        <h3>Ưu điểm:</h3>
-                        <ul id="modal-pros"></ul>
-                    </div>
-                    <div class="cons">
-                        <h3>Nhược điểm:</h3>
-                        <ul id="modal-cons"></ul>
-                    </div>
-                </div>
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="modal-title">Tên Laptop</h2>
 
-                <!-- Cột phải: Cấu hình, Giá & Bảo hành -->
-                <div class="config-info">
-                    <h3>Tùy chọn cấu hình:</h3>
-                    <select id="config-select" onchange="updatePrice()"></select>
-                    
-                    <p class="final-price">Giá: <span id="modal-price"></span></p>
-                    
-                    <div class="warranty-box">
-                        <h3>Chính sách bảo hành:</h3>
-                        <p id="modal-warranty"></p>
-                    </div>
-                </div>
+        <div class="modal-body">
+          <div class="specs-info">
+            <div class="pros">
+              <h3>Ưu điểm:</h3>
+              <ul id="modal-pros"></ul>
             </div>
+            <div class="cons">
+              <h3>Nhược điểm:</h3>
+              <ul id="modal-cons"></ul>
+            </div>
+          </div>
+
+          <div class="config-info">
+            <h3>Tùy chọn cấu hình:</h3>
+            <select id="config-select" onchange="updatePrice()"></select>
+
+            <p class="final-price">Giá: <span id="modal-price"></span></p>
+
+            <div class="warranty-box">
+              <h3>Chính sách bảo hành:</h3>
+              <p id="modal-warranty"></p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
-    <!-- KHU VỰC 5: FOOTER -->
     <footer id="contact">
-        <p>Liên hệ: 0384039030</p>
+      <p>Liên hệ: 0384039030</p>
     </footer>
 
-    <!-- Nhúng file Script -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

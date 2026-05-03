@@ -86,7 +86,7 @@ body {
 }
 .hero-text {
   flex: 1;
-  max-width: 550px;
+  max-width: 650px;
 }
 .hero-text h1 {
   font-size: 3rem;
@@ -109,13 +109,12 @@ body {
 .btn-primary:hover {
   background-color: #f1f1f1;
 }
-.hero-image {
-  flex: 1;
-  text-align: right;
-}
-.hero-image img {
+.hero-video img,
+.hero-video video {
   max-width: 100%;
   height: auto;
+  border-radius: 12px; /* Bo cong góc video cho mềm mại */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Tạo bóng đổ nhẹ giúp video nổi bật trên nền xanh */
 }
 
 .wave {
@@ -360,5 +359,51 @@ footer {
   }
   .hero-text h1 {
     font-size: 2.2rem;
+  }
+}
+
+/* GIAO DIỆN BỘ LỌC SẢN PHẨM */
+.filter-section {
+  max-width: 800px;
+  margin: 20px auto 40px;
+  padding: 0 20px;
+}
+.filter-container {
+  background-color: #f4f6f7;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+.filter-container h3 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 1.4rem;
+}
+.filter-controls {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.filter-controls select {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  flex: 1;
+  cursor: pointer;
+  background-color: white;
+  transition: 0.3s;
+}
+.filter-controls select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+@media (max-width: 600px) {
+  .filter-controls {
+    flex-direction: column;
   }
 }

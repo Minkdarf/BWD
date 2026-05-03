@@ -1,9 +1,10 @@
-// DỮ LIỆU LAPTOP (Bao gồm Gaming và Mỏng nhẹ)
+// DỮ LIỆU LAPTOP (Đã bổ sung thuộc tính brand để lọc)
 const laptops = [
   // --- LAPTOP GAMING ---
   {
     id: 1,
     name: "Acer Nitro 5",
+    brand: "Acer",
     category: "gaming",
     image:
       "https://via.placeholder.com/300x200/2c3e50/ffffff?text=Acer+Nitro+5",
@@ -18,6 +19,7 @@ const laptops = [
   {
     id: 2,
     name: "HP Victus 15",
+    brand: "HP",
     category: "gaming",
     image:
       "https://via.placeholder.com/300x200/2c3e50/ffffff?text=HP+Victus+15",
@@ -32,6 +34,7 @@ const laptops = [
   {
     id: 3,
     name: "Asus TUF Gaming F15",
+    brand: "Asus",
     category: "gaming",
     image:
       "https://via.placeholder.com/300x200/2c3e50/ffffff?text=Asus+TUF+F15",
@@ -46,6 +49,7 @@ const laptops = [
   {
     id: 4,
     name: "Lenovo LOQ 15",
+    brand: "Lenovo",
     category: "gaming",
     image: "https://via.placeholder.com/300x200/2c3e50/ffffff?text=Lenovo+LOQ",
     pros: [
@@ -63,6 +67,7 @@ const laptops = [
   {
     id: 5,
     name: "Dell Alienware m15",
+    brand: "Dell",
     category: "gaming",
     image:
       "https://via.placeholder.com/300x200/2c3e50/ffffff?text=Dell+Alienware",
@@ -79,6 +84,7 @@ const laptops = [
   {
     id: 6,
     name: "Asus Vivobook 15 OLED",
+    brand: "Asus",
     category: "thin-light",
     image:
       "https://via.placeholder.com/300x200/3498db/ffffff?text=Asus+Vivobook",
@@ -93,6 +99,7 @@ const laptops = [
   {
     id: 7,
     name: "Lenovo ThinkBook 14",
+    brand: "Lenovo",
     category: "thin-light",
     image:
       "https://via.placeholder.com/300x200/3498db/ffffff?text=Lenovo+ThinkBook",
@@ -113,11 +120,22 @@ const laptops = [
 let currentSelectedLaptop = null;
 
 // HÀM HIỂN THỊ SẢN PHẨM RA MÀN HÌNH
-function renderProducts() {
+function renderProducts(dataToRender) {
   const gamingContainer = document.getElementById("gaming-container");
   const officeContainer = document.getElementById("office-container");
+  const gamingSection = document.getElementById("gaming-section");
+  const officeSection = document.getElementById("office-section");
 
-  laptops.forEach((laptop) => {
+  // Xóa trắng trước khi in
+  gamingContainer.innerHTML = "";
+  officeContainer.innerHTML = "";
+  gamingSection.style.display = "none";
+  officeSection.style.display = "none";
+
+  let hasGaming = false;
+  let hasOffice = false;
+
+  dataToRender.forEach((laptop) => {
     const defaultPrice = laptop.configs[0].price;
     const defaultSpecs = laptop.configs[0].name;
 
@@ -133,10 +151,37 @@ function renderProducts() {
 
     if (laptop.category === "gaming") {
       gamingContainer.innerHTML += productHTML;
+      gamingSection.style.display = "block";
+      hasGaming = true;
     } else if (laptop.category === "thin-light") {
       officeContainer.innerHTML += productHTML;
+      officeSection.style.display = "block";
+      hasOffice = true;
     }
   });
+
+  // Hiển thị thông báo nếu lọc không ra máy nào
+  if (!hasGaming && !hasOffice) {
+    gamingContainer.innerHTML =
+      '<p style="text-align:center; color:red; grid-column: 1 / -1; font-weight: bold;">Không tìm thấy laptop phù hợp với tiêu chí của bạn!</p>';
+    gamingSection.style.display = "block";
+  }
+}
+
+// HÀM LỌC SẢN PHẨM
+function filterProducts() {
+  const selectedBrand = document.getElementById("filter-brand").value;
+  const selectedCategory = document.getElementById("filter-category").value;
+
+  const filteredLaptops = laptops.filter((laptop) => {
+    const matchBrand =
+      selectedBrand === "all" || laptop.brand === selectedBrand;
+    const matchCategory =
+      selectedCategory === "all" || laptop.category === selectedCategory;
+    return matchBrand && matchCategory;
+  });
+
+  renderProducts(filteredLaptops);
 }
 
 // HÀM MỞ HỘP THOẠI MODAL
@@ -163,7 +208,6 @@ function openModal(id) {
   document.getElementById("product-modal").style.display = "block";
 }
 
-// HÀM CẬP NHẬT GIÁ KHI ĐỔI CẤU HÌNH
 function updatePrice() {
   const selectedIndex = document.getElementById("config-select").value;
   document.getElementById("modal-price").innerText =
@@ -172,10 +216,10 @@ function updatePrice() {
 
 // CÁC SỰ KIỆN CHẠY KHI TRANG ĐÃ TẢI XONG
 document.addEventListener("DOMContentLoaded", function () {
-  // 1. Chạy hàm render sản phẩm
-  renderProducts();
+  // In toàn bộ sản phẩm lúc khởi tạo
+  renderProducts(laptops);
 
-  // 2. Xử lý Menu trên Mobile
+  // Xử lý Menu trên Mobile
   const menuToggle = document.getElementById("mobile-menu");
   const navMenu = document.getElementById("nav-menu");
 
@@ -190,7 +234,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // 3. Đóng Modal
+  // Đóng Modal
   const modal = document.getElementById("product-modal");
   const closeBtn = document.querySelector(".close-btn");
 
