@@ -109,12 +109,25 @@ body {
 .btn-primary:hover {
   background-color: #f1f1f1;
 }
-.hero-video img,
+.hero-video {
+  flex: 1;
+  text-align: right; /* Giữ nguyên căn lề cũ */
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  /* --- PHẦN QUAN TRỌNG ĐỂ SỬA LỖI --- */
+  border-radius: 30px; /* Đặt góc bo vào đây (cha) */
+  overflow: hidden;    /* CHÌA KHÓA: Che đi tất cả các góc vuông của video thừa ra bên ngoài */
+  /* Thêm một vài hiệu ứng để khung trông giống laptop hơn */
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3); /* Đổ bóng đậm hơn cho nổi bật */
+  border: 5px solid rgba(255,255,255,0.2); /* Tạo một viền mờ như khung viền màn hình */
+}
+.hero-video, 
 .hero-video video {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px; /* Bo cong góc video cho mềm mại */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Tạo bóng đổ nhẹ giúp video nổi bật trên nền xanh */
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  pointer-events: none;
 }
 
 .wave {
