@@ -6,6 +6,7 @@ const laptops = [
     name: "Acer Nitro 5",
     brand: "Acer",
     category: "gaming",
+    shopeeUrl: "https://shopee.vn/search?keyword=Acer+Nitro+5",
     image:
       "https://via.placeholder.com/300x200/2c3e50/ffffff?text=Acer+Nitro+5",
     pros: ["Thiết kế hầm hố", "Tản nhiệt 2 quạt mát mẻ", "Dễ dàng nâng cấp"],
@@ -21,6 +22,7 @@ const laptops = [
     name: "HP Victus 15",
     brand: "HP",
     category: "gaming",
+    shopeeUrl: "https://shopee.vn/search?keyword=HP+Victus+15",
     image:
       "https://via.placeholder.com/300x200/2c3e50/ffffff?text=HP+Victus+15",
     pros: ["Thiết kế thanh lịch", "Màn hình 144Hz", "Bàn phím gõ nảy"],
@@ -36,6 +38,7 @@ const laptops = [
     name: "Asus TUF Gaming F15",
     brand: "Asus",
     category: "gaming",
+    shopeeUrl: "https://shopee.vn/search?keyword=Asus+TUF+Gaming+F15",
     image:
       "https://via.placeholder.com/300x200/2c3e50/ffffff?text=Asus+TUF+F15",
     pros: ["Độ bền chuẩn quân đội", "Pin lớn", "Thiết kế mặt lưng kim loại"],
@@ -51,6 +54,7 @@ const laptops = [
     name: "Lenovo LOQ 15",
     brand: "Lenovo",
     category: "gaming",
+    shopeeUrl: "https://shopee.vn/search?keyword=Lenovo+LOQ+15",
     image: "https://via.placeholder.com/300x200/2c3e50/ffffff?text=Lenovo+LOQ",
     pros: [
       "Tản nhiệt cao cấp",
@@ -69,6 +73,7 @@ const laptops = [
     name: "Dell Alienware m15",
     brand: "Dell",
     category: "gaming",
+    shopeeUrl: "https://shopee.vn/search?keyword=Dell+Alienware+m15",
     image:
       "https://via.placeholder.com/300x200/2c3e50/ffffff?text=Dell+Alienware",
     pros: ["Thiết kế phi thuyền", "LED RGB AlienFX", "Hiệu năng tối đa"],
@@ -86,6 +91,7 @@ const laptops = [
     name: "Asus Vivobook 15 OLED",
     brand: "Asus",
     category: "thin-light",
+    shopeeUrl: "https://shopee.vn/search?keyword=Asus+Vivobook+15+OLED",
     image:
       "https://via.placeholder.com/300x200/3498db/ffffff?text=Asus+Vivobook",
     pros: ["Màn hình OLED rực rỡ", "Thiết kế mỏng nhẹ", "Pin trâu"],
@@ -101,6 +107,7 @@ const laptops = [
     name: "Lenovo ThinkBook 14",
     brand: "Lenovo",
     category: "thin-light",
+    shopeeUrl: "https://shopee.vn/search?keyword=Lenovo+ThinkBook+14",
     image:
       "https://via.placeholder.com/300x200/3498db/ffffff?text=Lenovo+ThinkBook",
     pros: [
@@ -113,6 +120,36 @@ const laptops = [
     configs: [
       { name: "Core i5 | 8GB RAM | 256GB SSD", price: "14.200.000 VNĐ" },
       { name: "Core i5 | 16GB RAM | 512GB SSD", price: "15.800.000 VNĐ" },
+    ],
+  },
+  {
+    id: 8,
+    name: "Dell Inspiron 14 5445 ",
+    brand: "Dell",
+    category: "thin-light",
+    shopeeUrl: "https://shopee.vn/search?keyword=Dell+Inspiron+14+5445",
+    image: "https://ten-file-anh-cua-ban.jpg", // Hoặc link ảnh online
+    pros: [
+      "Hiệu năng cực kỳ mạnh mẽ",
+      "Màn hình 2K sắc nét",
+      "Mỏng nhẹ, dễ dàng mang theo",
+      "Thương hiệu uy tín Dell",
+    ],
+    cons: [
+      "Giá thành cao",
+      "Máy khá dày và nặng",
+      "Củ sạc đi kèm chiếm diện tích",
+    ],
+    warranty: "Bảo hành chính hãng 24 tháng Dell Việt Nam.",
+    configs: [
+      {
+        name: "Core Ryzen 7 - 8840HS | 16GB| 512GB SSD|FHD",
+        price: "14.890.000đ",
+      },
+      {
+        name: "Core Ryzen 7 - 8840HS | 32GB| 512GB SSD|2K",
+        price: "17.890.000đ",
+      },
     ],
   },
 ];
@@ -138,6 +175,13 @@ function renderProducts(dataToRender) {
     const defaultPrice = laptop.configs[0].price;
     const defaultSpecs = laptop.configs[0].name;
 
+    const shopeeBtn = laptop.shopeeUrl
+      ? `<a href="${laptop.shopeeUrl}" target="_blank" rel="noopener noreferrer" class="btn-shopee">
+           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Shopee.svg/512px-Shopee.svg.png" alt="Shopee" style="width:18px;height:18px;vertical-align:middle;margin-right:6px;">
+           Mua trên Shopee
+         </a>`
+      : "";
+
     const productHTML = `
             <div class="product-card">
                 <img src="${laptop.image}" alt="${laptop.name}">
@@ -145,6 +189,7 @@ function renderProducts(dataToRender) {
                 <p style="color: #666; font-size: 0.9rem; margin: 10px 0;">${defaultSpecs}</p>
                 <p class="price">${defaultPrice}</p>
                 <button class="btn-detail" onclick="openModal(${laptop.id})">Tùy Chọn & Chi Tiết</button>
+                ${shopeeBtn}
             </div>
         `;
 
@@ -397,15 +442,19 @@ async function sendMessage() {
     });
 
     const data = await response.json();
-    const botReply = data.content?.[0]?.text || "Xin lỗi, mình chưa hiểu câu hỏi của bạn. Bạn có thể hỏi lại không?";
+    const botReply =
+      data.content?.[0]?.text ||
+      "Xin lỗi, mình chưa hiểu câu hỏi của bạn. Bạn có thể hỏi lại không?";
 
     removeTypingIndicator();
     appendMessage("bot", botReply.replace(/\n/g, "<br>"));
     chatHistory.push({ role: "assistant", content: botReply });
-
   } catch (err) {
     removeTypingIndicator();
-    appendMessage("bot", "⚠️ Có lỗi kết nối. Vui lòng thử lại hoặc liên hệ <strong>0384039030</strong>.");
+    appendMessage(
+      "bot",
+      "⚠️ Có lỗi kết nối. Vui lòng thử lại hoặc liên hệ <strong>0384039030</strong>.",
+    );
   }
 
   isTyping = false;
