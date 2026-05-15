@@ -6,9 +6,8 @@ const laptops = [
     name: "Acer Nitro 5",
     brand: "Acer",
     category: "gaming",
-    shopeeUrl: "https://shopee.vn/search?keyword=Acer+Nitro+5",
     image:
-      "https://via.placeholder.com/300x200/2c3e50/ffffff?text=Acer+Nitro+5",
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/2/8/28_1_17.jpg",
     pros: ["Thiết kế hầm hố", "Tản nhiệt 2 quạt mát mẻ", "Dễ dàng nâng cấp"],
     cons: ["Quạt tản nhiệt kêu to", "Trọng lượng máy khá nặng"],
     warranty: "Bảo hành VIP 3S1: Đổi mới nếu bảo hành quá 3 ngày.",
@@ -22,9 +21,8 @@ const laptops = [
     name: "HP Victus 15",
     brand: "HP",
     category: "gaming",
-    shopeeUrl: "https://shopee.vn/search?keyword=HP+Victus+15",
     image:
-      "https://via.placeholder.com/300x200/2c3e50/ffffff?text=HP+Victus+15",
+      "https://www.tncstore.vn/media/product/10785-tnc-store-laptop-gaming-hp-victus-15-fa0033dx--2-.jpg",
     pros: ["Thiết kế thanh lịch", "Màn hình 144Hz", "Bàn phím gõ nảy"],
     cons: ["Bản lề hơi rung lắc", "Chỉ có 1 khe cắm SSD"],
     warranty: "Bảo hành chính hãng 12 tháng HP toàn quốc.",
@@ -38,9 +36,8 @@ const laptops = [
     name: "Asus TUF Gaming F15",
     brand: "Asus",
     category: "gaming",
-    shopeeUrl: "https://shopee.vn/search?keyword=Asus+TUF+Gaming+F15",
     image:
-      "https://via.placeholder.com/300x200/2c3e50/ffffff?text=Asus+TUF+F15",
+      "https://tanphat.com.vn/media/product/9529_50961_laptop_asus_tuf_gaming_f15_fx507vi_lp077w__3_.jpg",
     pros: ["Độ bền chuẩn quân đội", "Pin lớn", "Thiết kế mặt lưng kim loại"],
     cons: ["Màu màn hình ở mức cơ bản", "Hơi ấm khi chơi lâu"],
     warranty: "Bảo hành quốc tế 24 tháng ASUS.",
@@ -54,8 +51,8 @@ const laptops = [
     name: "Lenovo LOQ 15",
     brand: "Lenovo",
     category: "gaming",
-    shopeeUrl: "https://shopee.vn/search?keyword=Lenovo+LOQ+15",
-    image: "https://via.placeholder.com/300x200/2c3e50/ffffff?text=Lenovo+LOQ",
+    image:
+      "https://ngocnguyen.vn/cdn/images/202402/goods_img/new-100-lenovo-loq-15irh8-core-i5-12th-rtx-2050-156-inch-model-2023-P15693-1708569698389.png",
     pros: [
       "Tản nhiệt cao cấp",
       "Bàn phím cực kỳ sướng",
@@ -73,9 +70,8 @@ const laptops = [
     name: "Dell Alienware m15",
     brand: "Dell",
     category: "gaming",
-    shopeeUrl: "https://shopee.vn/search?keyword=Dell+Alienware+m15",
     image:
-      "https://via.placeholder.com/300x200/2c3e50/ffffff?text=Dell+Alienware",
+      "https://nguyencongpc.vn/media/product/21216-dell-alienware-gaming-m15-r6-p109f001bbl-1.jpg",
     pros: ["Thiết kế phi thuyền", "LED RGB AlienFX", "Hiệu năng tối đa"],
     cons: ["Giá cực kỳ đắt đỏ", "Rất nặng"],
     warranty: "Bảo hành tận nơi 12 tháng Premium Support.",
@@ -84,16 +80,46 @@ const laptops = [
       { name: "Core i9 13900HX | RTX 4080 | 32GB", price: "79.000.000 VNĐ" },
     ],
   },
+  {
+    id: 9,
+    name: "MSI Katana 15 ",
+    brand: "MSI",
+    category: "gaming",
 
+    image:
+      "https://ttcenter.com.vn/uploads/product/guym6rfk-2187-msi-katana-15-b13udxk-2269vn-intel-core-i7-13620h-16gb-1tb-rtx-3050-6gb-15-6-fhd-144hz-new.jpg", // Hoặc link ảnh online
+    pros: [
+      "Cấu hình khủng",
+      "Hệ thống tản nhiệt tối ưu",
+      "Khả năng nâng cấp linh hoạt",
+      "Bàn phím thiết kế tốt cho game",
+    ],
+    cons: [
+      "Thời lượng pin khiêm tốn",
+      "Máy khá dày và nặng",
+      "Củ sạc đi kèm chiếm diện tích",
+    ],
+    warranty: "Bảo hành chính hãng MSI 24 tháng ",
+    configs: [
+      {
+        name: "i7-13620H|RTX 3050 6GB|16GB",
+        price: "23.590.000đ",
+      },
+      {
+        name: "i7-13620H|RTX 4060 8GB|16GB 1TB",
+        price: "27.990.000đ",
+      },
+    ],
+  },
   // --- LAPTOP MỎNG NHẸ VĂN PHÒNG ---
   {
     id: 6,
     name: "Asus Vivobook 15 OLED",
     brand: "Asus",
     category: "thin-light",
-    shopeeUrl: "https://shopee.vn/search?keyword=Asus+Vivobook+15+OLED",
+
     image:
-      "https://via.placeholder.com/300x200/3498db/ffffff?text=Asus+Vivobook",
+      "https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:format(webp):quality(75)/vivobook_15_cover_53f9273509.png",
     pros: ["Màn hình OLED rực rỡ", "Thiết kế mỏng nhẹ", "Pin trâu"],
     cons: ["Hàn chết RAM", "Vỏ nhựa dễ bám vân tay"],
     warranty: "Bảo hành quốc tế 24 tháng ASUS.",
@@ -107,9 +133,9 @@ const laptops = [
     name: "Lenovo ThinkBook 14",
     brand: "Lenovo",
     category: "thin-light",
-    shopeeUrl: "https://shopee.vn/search?keyword=Lenovo+ThinkBook+14",
+
     image:
-      "https://via.placeholder.com/300x200/3498db/ffffff?text=Lenovo+ThinkBook",
+      "https://philong.com.vn/media/product/32665-laptop-lenovo-thinkbook-14-g6-irl-21kg00qmvn-philong1.png",
     pros: [
       "Vỏ nhôm cao cấp",
       "Bàn phím chống tràn, gõ cực êm",
@@ -127,8 +153,9 @@ const laptops = [
     name: "Dell Inspiron 14 5445 ",
     brand: "Dell",
     category: "thin-light",
-    shopeeUrl: "https://shopee.vn/search?keyword=Dell+Inspiron+14+5445",
-    image: "https://ten-file-anh-cua-ban.jpg", // Hoặc link ảnh online
+
+    image:
+      "https://cdni.dienthoaivui.com.vn/x,webp,q100/https://dashboard.dienthoaivui.com.vn/uploads/wp-content/uploads/images/thay-man-hinh-laptop-dell-inspiron-14-5445-a1.jpg", // Hoặc link ảnh online
     pros: [
       "Hiệu năng cực kỳ mạnh mẽ",
       "Màn hình 2K sắc nét",
@@ -143,12 +170,39 @@ const laptops = [
     warranty: "Bảo hành chính hãng 24 tháng Dell Việt Nam.",
     configs: [
       {
-        name: "Core Ryzen 7 - 8840HS | 16GB| 512GB SSD|FHD",
+        name: "Ryzen 7 - 8840HS|16GB|512GB SSD",
         price: "14.890.000đ",
       },
       {
-        name: "Core Ryzen 7 - 8840HS | 32GB| 512GB SSD|2K",
+        name: "Ryzen 7 - 8840HS | 32GB| 512GB SSD|2K",
         price: "17.890.000đ",
+      },
+    ],
+  },
+  {
+    id: 10,
+    name: "HP 15 ",
+    brand: "HP",
+    category: "thin-light",
+
+    image:
+      "https://ttcenter.com.vn/uploads/product/c8trzu66-2878-hp-15-fd0250wm-core-i5-1334u-8gb-512gb-15-6-hd-led-bac-new.jpg", // Hoặc link ảnh online
+    pros: [
+      "Hiệu năng ổn định và mượt mà",
+      "Màn hình lớn 15.6 inch HD hiển thị sắc nét",
+      "Mỏng nhẹ, dễ dàng mang theo",
+      "Đa dạng cổng kết nối linh hoạt",
+    ],
+    cons: [
+      "Chất lượng hoàn thiện (Build quality) ở mức trung bình",
+      "Tản nhiệt yếu và giới hạn hiệu năng",
+      "Thời lượng pin không quá ấn tượng",
+    ],
+    warranty: "Bảo hành 36 tháng HP.",
+    configs: [
+      {
+        name: "Core i5-1334U 8GB 512GB 15.6",
+        price: "14.890.000đ",
       },
     ],
   },
@@ -175,13 +229,6 @@ function renderProducts(dataToRender) {
     const defaultPrice = laptop.configs[0].price;
     const defaultSpecs = laptop.configs[0].name;
 
-    const shopeeBtn = laptop.shopeeUrl
-      ? `<a href="${laptop.shopeeUrl}" target="_blank" rel="noopener noreferrer" class="btn-shopee">
-           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Shopee.svg/512px-Shopee.svg.png" alt="Shopee" style="width:18px;height:18px;vertical-align:middle;margin-right:6px;">
-           Mua trên Shopee
-         </a>`
-      : "";
-
     const productHTML = `
             <div class="product-card">
                 <img src="${laptop.image}" alt="${laptop.name}">
@@ -189,7 +236,6 @@ function renderProducts(dataToRender) {
                 <p style="color: #666; font-size: 0.9rem; margin: 10px 0;">${defaultSpecs}</p>
                 <p class="price">${defaultPrice}</p>
                 <button class="btn-detail" onclick="openModal(${laptop.id})">Tùy Chọn & Chi Tiết</button>
-                ${shopeeBtn}
             </div>
         `;
 
@@ -248,6 +294,19 @@ function openModal(id) {
     .join("");
 
   updatePrice();
+
+  // Hiển thị nút mua hàng
+  const buyLinksHTML = (currentSelectedLaptop.buyLinks || [])
+    .map(
+      (link) => `
+      <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="btn-buy-link">
+        <span>${link.icon}</span> ${link.name}
+      </a>`,
+    )
+    .join("");
+  const buyContainer = document.getElementById("modal-buy-links");
+  if (buyContainer) buyContainer.innerHTML = buyLinksHTML;
+
   document.getElementById("product-modal").style.display = "block";
 }
 
@@ -461,6 +520,72 @@ async function sendMessage() {
   document.getElementById("chat-send-btn").disabled = false;
 }
 
+// HÀM TÌM KIẾM SẢN PHẨM
+function searchProducts() {
+  const query = document
+    .getElementById("search-input")
+    .value.trim()
+    .toLowerCase();
+  const suggestionsBox = document.getElementById("search-suggestions");
+  const clearBtn = document.getElementById("search-clear");
+
+  clearBtn.style.display = query ? "block" : "none";
+
+  if (!query) {
+    suggestionsBox.classList.remove("active");
+    suggestionsBox.innerHTML = "";
+    renderProducts(laptops);
+    return;
+  }
+
+  const categoryIcon = { gaming: "🎮", "thin-light": "💼" };
+
+  const results = laptops.filter(
+    (l) =>
+      l.name.toLowerCase().includes(query) ||
+      l.brand.toLowerCase().includes(query) ||
+      l.category.toLowerCase().includes(query) ||
+      l.pros.some((p) => p.toLowerCase().includes(query)),
+  );
+
+  if (results.length === 0) {
+    suggestionsBox.innerHTML = `<div class="search-no-result">😕 Không tìm thấy laptop phù hợp với "<strong>${query}</strong>"</div>`;
+  } else {
+    suggestionsBox.innerHTML = results
+      .map(
+        (l) => `
+      <div class="suggestion-item" onclick="goToProduct(${l.id})">
+        <div class="suggestion-icon">${categoryIcon[l.category] || "💻"}</div>
+        <div>
+          <div class="suggestion-name">${l.name}</div>
+          <div class="suggestion-meta">${l.brand} · ${l.category === "gaming" ? "Gaming" : "Mỏng nhẹ"}</div>
+        </div>
+        <div class="suggestion-price">${l.configs[0].price}</div>
+      </div>`,
+      )
+      .join("");
+  }
+
+  suggestionsBox.classList.add("active");
+  renderProducts(results.length ? results : []);
+}
+
+function goToProduct(id) {
+  document.getElementById("search-suggestions").classList.remove("active");
+  document.getElementById("search-input").value = "";
+  document.getElementById("search-clear").style.display = "none";
+  renderProducts(laptops);
+  setTimeout(() => openModal(id), 100);
+}
+
+function clearSearch() {
+  document.getElementById("search-input").value = "";
+  document.getElementById("search-clear").style.display = "none";
+  document.getElementById("search-suggestions").classList.remove("active");
+  document.getElementById("search-suggestions").innerHTML = "";
+  renderProducts(laptops);
+}
+
 // CÁC SỰ KIỆN CHẠY KHI TRANG ĐÃ TẢI XONG
 document.addEventListener("DOMContentLoaded", function () {
   renderProducts(laptops);
@@ -486,6 +611,14 @@ document.addEventListener("DOMContentLoaded", function () {
   window.onclick = (e) => {
     if (e.target == modal) modal.style.display = "none";
   };
+
+  // Đóng gợi ý khi click ra ngoài
+  document.addEventListener("click", (e) => {
+    const searchArea = document.querySelector(".hero-search");
+    if (searchArea && !searchArea.contains(e.target)) {
+      document.getElementById("search-suggestions").classList.remove("active");
+    }
+  });
 
   // Khởi tạo chatbot
   createChatbotUI();
